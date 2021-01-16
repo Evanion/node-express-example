@@ -2,6 +2,7 @@ import express from "express";
 import { json } from "body-parser";
 import { Controller } from "./framework";
 import { Middleware } from "./framework/middleware";
+import { PORT } from "./constants";
 
 export class App {
   public app = express();
@@ -10,7 +11,7 @@ export class App {
   constructor(
     controllers: Controller[] = [],
     middleware: Middleware[] = [],
-    port: number = 8080
+    port: number = PORT
   ) {
     this.port = port;
 
